@@ -1,5 +1,6 @@
-Program to find the second-largest element in the given array
-package Day6;
+1) Program to find the second-largest element in the given array
+a) without Taking input from user Solution is ->
+
 import java.util.Arrays;
 public class Arrayfull {
     public static void main(String[] args) {
@@ -7,5 +8,40 @@ public class Arrayfull {
         Arrays.sort(arr);
         int n = arr.length - 2 ;
         System.out.println(arr[n]);
+    }
+}
+
+b) with Taking input from user Solution is ->
+import java.util.Scanner;
+
+public class Arrayfull {
+    static int max(int arr[]){
+        int mx = Integer.MIN_VALUE;
+        for (int i=0;i< arr.length;i++){
+            if (arr[i]>mx){
+                mx = arr[i];
+            }
+        }
+        return mx;
+    }
+    static int Secondmx(int arr[]) {
+        int max1 = max(arr);
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == max1) {
+                arr[i] = Integer.MIN_VALUE;
+            }
+        }
+        int max2 = max(arr);
+        return max2;}
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Size of array: ");
+        int n = sc.nextInt();
+        int arr [] = new int[n];
+        System.out.print("Enter Element One by one: ");
+        for (int i=0;i< arr.length;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.println(Secondmx(arr));
     }
 }
