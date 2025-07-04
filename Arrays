@@ -1,0 +1,11 @@
+Program to find the second-largest element in the given array
+package Day6;
+import java.util.Arrays;
+public class Arrayfull {
+    public static void main(String[] args) {
+        int arr [] = {7 , 3 , 9 , 4 , 5};
+        Arrays.sort(arr);
+        int n = arr.length - 2 ;
+        System.out.println(arr[n]);
+    }
+}
