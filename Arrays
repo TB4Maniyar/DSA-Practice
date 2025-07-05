@@ -82,3 +82,47 @@ public class Task {
         System.out.println("Last repeating value: " + last(arr));
     }
 }
+
+4) a) Swap using temporary variable
+public class Practice1 {
+    static void swap(int a,int b) {
+        int temp;
+        temp = a;
+        a = b;
+        b = temp;
+        System.out.println(a+ " " + b);
+    }
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+        System.out.println("Before Swapping: ");
+        System.out.println(a+ " " + b);
+        System.out.println("After Swapping: ");
+        swap(10,20);
+    }
+}
+
+4) b) Swap using temporary variable in Array
+public class Practice1 {
+    static int[] swap(int [] arr) {
+        int temp;
+            temp = arr[0];
+            arr[0] = arr[1];
+            arr[1] = temp;
+
+        return arr;}
+    public static void main(String[] args) {
+        int arr [] = {9,3};
+        System.out.println("Before Swapping: ");
+        for (int i=0;i< arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println(" ");
+        swap(arr);
+        System.out.println("After Swapping: ");
+        for (int i=0;i< arr.length;i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+}
+
