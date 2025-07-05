@@ -143,3 +143,18 @@ public class Practice1 {
         swap(10, 20);
     }
 }
+
+//Q6. Reverse an array
+public class Practice1 {
+    public static void main(String[] args) {
+        int[] arr = {1,2,3};
+        int n = arr.length;
+        int [] ans = new int[n];
+        for (int i = 0; i < n ; i++) {
+                ans[i]= arr[n-i-1];
+        }
+    for(int i=0;i<n;i++){
+        System.out.println(ans[i]);
+    }
+    }
+}
