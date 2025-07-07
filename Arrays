@@ -231,3 +231,22 @@ public class Task {
 //        }
 //    }
 //}
+
+//Q9. find and return the largest element.
+package Arrayfull;
+public class LargestElement {
+    public static int findLargest(int[] arr) {
+        int max = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {10, 45, 2, 89, 33};
+        System.out.println("Largest Element: " + findLargest(arr));
+    }
+}
